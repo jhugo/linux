@@ -46,8 +46,7 @@
 		rmtfs {
 			compatible = "qcom,rmtfs-mem";
 
-			size = <0x0 0x200000>;
-			alloc-ranges = <0x0 0xa0000000 0x0 0x2000000>;
+			reg = <0x0 0x9fa00000 0x0 0x200000>;
 			no-map;
 
 			qcom,client-id = <1>;
