@@ -1098,8 +1098,9 @@ static void qcom_q6v5_dump_segment(struct rproc *rproc,
 	if (!qproc->dump_mba_loaded) {
 		ret = q6v5_mba_load(qproc);
 
-		/* Try to reset ownership back to Linux */
-		q6v5_xfer_mem_ownership(qproc, &qproc->mpss_perm, true, false,
+		if (!ret)
+			/* Try to reset ownership back to Linux */
+			q6v5_xfer_mem_ownership(qproc, &qproc->mpss_perm, true, false,
 					qproc->mpss_phys, qproc->mpss_size);
 	}
 
