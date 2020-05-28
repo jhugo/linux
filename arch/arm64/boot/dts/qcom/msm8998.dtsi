@@ -1098,7 +1098,7 @@
 				 <&gcc GCC_MSS_SNOC_AXI_CLK>,
 				 <&gcc GCC_MSS_MNOC_BIMC_AXI_CLK>,
 				 <&rpmcc RPM_SMD_QDSS_CLK>,
-				 <&rpmcc RPM_SMD_XO_CLK_SRC>;
+				 <&xo>;
 			clock-names = "iface", "bus", "mem", "gpll0_mss",
 				      "snoc_axi", "mnoc_axi", "qdss", "xo";
 
